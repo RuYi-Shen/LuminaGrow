@@ -1,0 +1,77 @@
+.box {
+    width: 1800px;
+    height: 400px;
+    background-color: rgb(121, 82, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        1px 1px 0px rgba(85, 9, 9, 0.822),
+        2px 2px 0px rgba(85, 9, 9, 0.822),
+        3px 3px 0px rgba(85, 9, 9, 0.822),
+        4px 4px 0px rgba(85, 9, 9, 0.822),
+        5px 5px 0px rgba(85, 9, 9, 0.822),
+        6px 6px 0px rgba(85, 9, 9, 0.822),
+        7px 7px 0px rgba(85, 9, 9, 0.822),
+        8px 8px 0px rgba(85, 9, 9, 0.822),
+        9px 9px 0px rgba(85, 9, 9, 0.822),
+        10px 10px 0px rgba(85, 9, 9, 0.822),
+        11px 11px 0px rgba(85, 9, 9, 0.822),
+        12px 12px 0px rgba(85, 9, 9, 0.822),
+        13px 13px 0px rgba(85, 9, 9, 0.822),
+        14px 14px 0px rgba(85, 9, 9, 0.822),
+        15px 15px 0px rgba(85, 9, 9, 0.822),
+        16px 16px 0px rgba(85, 9, 9, 0.822),
+        17px 17px 0px rgba(85, 9, 9, 0.822),
+        18px 18px 0px rgba(85, 9, 9, 0.822),
+        19px 19px 0px rgba(85, 9, 9, 0.822),
+        20px 20px 0px rgba(85, 9, 9, 0.822),
+        21px 21px 0px rgba(85, 9, 9, 0.822),
+        22px 22px 0px rgba(85, 9, 9, 0.822),
+        23px 23px 0px rgba(85, 9, 9, 0.822),
+        24px 24px 0px rgba(85, 9, 9, 0.822),
+        25px 25px 0px rgba(85, 9, 9, 0.822),
+        26px 26px 0px rgba(85, 9, 9, 0.822),
+        27px 27px 0px rgba(85, 9, 9, 0.822),
+        28px 28px 0px rgba(85, 9, 9, 0.822),
+        29px 29px 0px rgba(85, 9, 9, 0.822),
+        30px 30px 0px rgba(85, 9, 9, 0.822);
+}
+
+.ground {
+    width: 1750px;
+    height: 350px;
+    position: relative;
+    background-color: rgba(39, 6, 6, 0.822);
+}
+
+img.plant1 {
+    position: absolute;
+    top: -40px;
+    width: 170px;
+    height: 170px;
+}
+
+img.plant2 {
+    position: absolute;
+    right: 120px;
+    top: 0;
+    width: 170px;
+    height: 170px;
+}
+
+img.plant3 {
+    position: absolute;
+    left: 120px;
+    bottom: 0;
+    width: 170px;
+    height: 170px;
+}
+
+img.plant4 {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 170px;
+    height: 170px;
+}
