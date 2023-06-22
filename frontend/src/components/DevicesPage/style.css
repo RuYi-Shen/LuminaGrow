@@ -1,3 +1,9 @@
+.devices-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
 .devices-page {
     padding: 50px;
     width: 100%;

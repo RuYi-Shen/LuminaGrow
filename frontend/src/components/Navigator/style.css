@@ -1,0 +1,28 @@
+.navigator-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: fit-content;
+    background-color: rgb(2, 2, 110);
+    white-space: nowrap;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: left;
+    display: flex;
+    gap: 10px;
+}
+
+button:hover {
+    background-color: rgb(41, 41, 110);
+}
+
+svg {
+    color: white;
+}
