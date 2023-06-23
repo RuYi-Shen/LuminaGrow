@@ -1,3 +1,9 @@
+.telemetry-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
 .telemetry-page {
     padding: 50px;
     width: 100%;
