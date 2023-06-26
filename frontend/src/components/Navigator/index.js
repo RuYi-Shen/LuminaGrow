@@ -6,10 +6,15 @@ export default function Navigator() {
 
     return (
         <div className="navigator-container">
-            <div className="logo"> Teste Smart garden</div>
+            <div className="logo-container">
+                <div className="logo">
+                    <ion-icon name="sunny"></ion-icon>
+                </div>
+                E.Garden
+            </div>
             <button onClick={() => navigate("/overview")}><ion-icon name="leaf-outline"></ion-icon> Overview</button>
-            <button onClick={() => navigate("/telemetry")}>Telemetry</button>
-            <button onClick={() => navigate("/devices")}>Devices</button>
+            <button onClick={() => navigate("/telemetry")}><ion-icon name="bar-chart-outline"></ion-icon>Telemetry</button>
+            <button onClick={() => navigate("/devices")}><ion-icon name="logo-apple-ar"></ion-icon>Devices</button>
         </div>
     )
 }

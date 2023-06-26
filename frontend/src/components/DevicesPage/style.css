@@ -14,13 +14,6 @@
     grid-template-rows: repeat(2, 1fr);
 }
 
-.card {
-    border-radius: 10px;
-    border: 1px solid rgb(34, 83, 64);
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-    background-color: rgba(72, 196, 159, 0.1);
-}
-
 
 .div1 {
     grid-area: 1 / 1 / 2 / 3;
