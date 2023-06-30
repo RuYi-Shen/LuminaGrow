@@ -10,7 +10,7 @@ export default function Navigator() {
                 <div className="logo">
                     <ion-icon name="sunny"></ion-icon>
                 </div>
-                E.Garden
+                L.Grow
             </div>
             <button onClick={() => navigate("/overview")}><ion-icon name="leaf-outline"></ion-icon> Overview</button>
             <button onClick={() => navigate("/telemetry")}><ion-icon name="bar-chart-outline"></ion-icon>Telemetry</button>

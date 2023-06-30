@@ -11,7 +11,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Navigate to='/login' />} />
+                <Route path="/" element={<Navigate to='/overview' />} />
                 <Route path="/login" element={<Initial />} />
                 <Route path="/overview" element={<OverviewPage />} />
                 <Route path="/telemetry" element={<TelemetryPage />} />

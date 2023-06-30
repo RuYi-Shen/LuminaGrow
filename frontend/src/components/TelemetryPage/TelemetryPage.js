@@ -1,50 +1,86 @@
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label } from "recharts";
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import Navigator from "../Navigator/index.js";
 import "./style.css";
 
 const data = [
     {
-        "name": "Page A",
-        "uv": 4000,
-        "pv": 2400,
-        "amt": 2400
+        "timestamp": "22:00",
+        "Humidity (%)": 32,
+        "Temperature (°C)": 19,
+        "Luminosity (lux)": 0
     },
     {
-        "name": "Page B",
-        "uv": 3000,
-        "pv": 1398,
-        "amt": 2210
+        "timestamp": "00:00",
+        "Humidity (%)": 30,
+        "Temperature (°C)": 18.5,
+        "Luminosity (lux)": 0
     },
     {
-        "name": "Page C",
-        "uv": 2000,
-        "pv": 9800,
-        "amt": 2290
+        "timestamp": "02:00",
+        "Humidity (%)": 29,
+        "Temperature (°C)": 17.5,
+        "Luminosity (lux)": 0
     },
     {
-        "name": "Page D",
-        "uv": 2780,
-        "pv": 3908,
-        "amt": 2000
+        "timestamp": "04:00",
+        "Humidity (%)": 25,
+        "Temperature (°C)": 16,
+        "Luminosity (lux)": 0
     },
     {
-        "name": "Page E",
-        "uv": 1890,
-        "pv": 4800,
-        "amt": 2181
+        "timestamp": "06:00",
+        "Humidity (%)": 24,
+        "Temperature (°C)": 16,
+        "Luminosity (lux)": 30
     },
     {
-        "name": "Page F",
-        "uv": 2390,
-        "pv": 3800,
-        "amt": 2500
+        "timestamp": "08:00",
+        "Humidity (%)": 23,
+        "Temperature (°C)": 17.9,
+        "Luminosity (lux)": 314
     },
     {
-        "name": "Page G",
-        "uv": 3490,
-        "pv": 4300,
-        "amt": 2100
-    }
+        "timestamp": "10:00",
+        "Humidity (%)": 85,
+        "Temperature (°C)": 19.4,
+        "Luminosity (lux)": 870
+    },
+    {
+        "timestamp": "12:00",
+        "Humidity (%)": 73,
+        "Temperature (°C)": 23,
+        "Luminosity (lux)": 987
+    },
+    {
+        "timestamp": "14:00",
+        "Humidity (%)": 61,
+        "Temperature (°C)": 25.8,
+        "Luminosity (lux)": 854
+    },
+    {
+        "timestamp": "16:00",
+        "Humidity (%)": 55,
+        "Temperature (°C)": 24.5,
+        "Luminosity (lux)": 440
+    },
+    {
+        "timestamp": "18:00",
+        "Humidity (%)": 51,
+        "Temperature (°C)": 22,
+        "Luminosity (lux)": 120
+    },
+    {
+        "timestamp": "20:00",
+        "Humidity (%)": 49,
+        "Temperature (°C)": 19,
+        "Luminosity (lux)": 50
+    },
+    {
+        "timestamp": "22:00",
+        "Humidity (%)": 44,
+        "Temperature (°C)": 18,
+        "Luminosity (lux)": 0
+    },
 ]
 
 export default function TelemetryPage() {
@@ -52,54 +88,57 @@ export default function TelemetryPage() {
         <div className="telemetry-container">
             <Navigator />
             <div className="telemetry-page">
-                <div className="card div1">
-                    <AreaChart width={0.45 * window.innerWidth} height={0.13 * window.innerWidth} data={data}
+                <div className="telemetry-card div1">
+                    <AreaChart width={730} height={350} data={data}
                         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                         <defs>
-                            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-                                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-                            </linearGradient>
-                            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+                            <linearGradient id="colorHumidity" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor="rgb(0, 110, 255)" stopOpacity={0.8} />
+                                <stop offset="95%" stopColor="rgb(0, 110, 255)" stopOpacity={0} />
                             </linearGradient>
                         </defs>
-                        <XAxis dataKey="name" />
-                        <YAxis label={{ value: 'Temperature', angle: -90, position: 'insideLeft' }} />
+                        <XAxis dataKey="timestamp" />
+                        <YAxis />
                         <Legend verticalAlign="top" height={36} />
                         <CartesianGrid horizontal vertical={false} strokeDasharray="3 3" />
                         <Tooltip />
-                        <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
-                        <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
+                        <Area type="monotone" dataKey="Humidity (%)" stroke="rgb(0, 110, 255)" fillOpacity={1} fill="url(#colorHumidity)" />
                     </AreaChart>
                 </div>
-                <div className="card div2">
-                    <AreaChart width={730} height={250} data={data}
+                <div className="telemetry-card div2">
+                    <AreaChart width={730} height={400} data={data}
                         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                         <defs>
-                            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-                                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-                            </linearGradient>
-                            <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                                <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+                            <linearGradient id="colorTemperature" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor="rgb(250, 120, 20)" stopOpacity={0.8} />
+                                <stop offset="95%" stopColor="rgb(250, 120, 20)" stopOpacity={0} />
                             </linearGradient>
                         </defs>
-                        <XAxis dataKey="name" />
+                        <XAxis dataKey="timestamp" />
+                        <Legend verticalAlign="top" height={36} />
                         <YAxis />
-                        <CartesianGrid strokeDasharray="3 3" />
+                        <CartesianGrid horizontal vertical={false} strokeDasharray="3 3" />
                         <Tooltip />
-                        <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
-                        <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
+                        <Area type="monotone" dataKey="Temperature (°C)" stroke="rgb(250, 120, 20)" fillOpacity={1} fill="url(#colorTemperature)" />
                     </AreaChart>
                 </div>
 
-                <div className="card div4">
-
-                </div>
-                <div className="card div5">
+                <div className="telemetry-card div3">
+                    <AreaChart width={600} height={850} data={data}
+                        margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                        <defs>
+                            <linearGradient id="colorLuminosity" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor="rgb(255, 205, 0)" stopOpacity={0.8} />
+                                <stop offset="95%" stopColor="rgb(255, 205, 0)" stopOpacity={0} />
+                            </linearGradient>
+                        </defs>
+                        <XAxis dataKey="timestamp" />
+                        <Legend verticalAlign="top" height={36} />
+                        <YAxis />
+                        <CartesianGrid horizontal={false} vertical strokeDasharray="3 3" />
+                        <Tooltip />
+                        <Area type="monotone" dataKey="Luminosity (lux)" stroke="rgb(255, 205, 0)" fillOpacity={1} fill="url(#colorLuminosity)" />
+                    </AreaChart>
 
                 </div>
             </div>
