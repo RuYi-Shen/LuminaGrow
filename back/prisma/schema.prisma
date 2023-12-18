@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model Entity {
+  id        String      @id @default(uuid())
+  label     String
+  Telemetry Telemetry[]
+
+  @@map("entities")
+}
+
+model Telemetry {
+  entityId  String
+  field     String
+  data      String
+  timestamp DateTime @default(now())
+  entity    Entity   @relation(fields: [entityId], references: [id])
+
+  @@unique([entityId, field, timestamp])
+  @@map("telemetries")
+}

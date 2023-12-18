@@ -1,0 +1,48 @@
+.navigator-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: fit-content;
+    background: linear-gradient(30deg, rgba(118, 203, 190, 1) 20%, rgba(51, 172, 180, 1) 100%);
+    white-space: nowrap;
+    z-index: 2;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    padding: 15px 30px;
+    text-align: left;
+    display: flex;
+    gap: 10px;
+}
+
+button:hover {
+    background-color: #90D4C6;
+}
+
+.logo-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    padding: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: #3CACAA;
+    border-radius: 5px;
+}

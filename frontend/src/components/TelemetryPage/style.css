@@ -1,0 +1,39 @@
+.telemetry-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.telemetry-page {
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.telemetry-card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    padding: 40px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.div3 {
+    grid-area: 1 / 2 / 3 / 3;
+}
